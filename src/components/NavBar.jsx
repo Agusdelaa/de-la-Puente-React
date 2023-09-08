@@ -10,6 +10,7 @@ import {
   Spacer
 
 } from '@chakra-ui/react'
+import { Link } from 'react-router-dom'
 
 const NavBar = () => {
   return (
@@ -17,7 +18,9 @@ const NavBar = () => {
       <div>
         <Flex>
           <Box p='6'>
-            <h2 className='white'>Deportes-Store</h2>
+            <Link to={"/"}>
+              <h2 className='white'>Deportes-Store</h2>
+            </Link>
           </Box>
           <Spacer />
           <Box p='6'>
@@ -27,18 +30,41 @@ const NavBar = () => {
                   Secciones
                 </MenuButton>
                 <MenuList>
-                  <MenuItem>Camisetas</MenuItem>
-                  <MenuItem>Botines</MenuItem>
-                  <MenuItem>Zapatillas</MenuItem>
-                  <MenuItem>Conjutos</MenuItem>
-                  <MenuItem>Accesorios</MenuItem>
+                  <MenuItem>
+                    <Link to={`category/${"men's clothing"}`}>
+                      Ropa Hombre
+                    </Link>
+                  </MenuItem>
+                  <MenuItem>
+                    <Link to={`category/${"jewelery"}`}>
+                      Joyas
+                    </Link>
+                  </MenuItem>
+                  <MenuItem>
+                    <Link to={`category/${"electronics"}`}>
+                      Electronicos
+                    </Link>
+                  </MenuItem>
+                  <MenuItem>
+                    <Link to={`category/${"women's clothing"}`}>
+                      Ropa Mujer
+                    </Link>
+                  </MenuItem>
+                  <MenuItem>
+                    <Link to={`/`}>
+                      Todos
+                    </Link> 
+                  </MenuItem>
                 </MenuList>
               </Menu>
             </div>
           </Box>
           <Spacer />
+
           <Box>
-            <CartWidget />
+            <Link to={"/cart"}>
+              <CartWidget />
+            </Link>
           </Box>
         </Flex>
       </div>
