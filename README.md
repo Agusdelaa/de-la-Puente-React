@@ -4,7 +4,7 @@
 
 _El proyecto se trata sobre una tienda de ropa deportiva.
 Para el diseño de la pagina utilice la libreria "CHAKRA-UI". tambien se hizo uso de "Toastify", y "SweetAlert".  
-Para suplir la falta de una Base de Datos
+Para suplir la falta de una Base de Datos, utilice Firebase, tanto para los productos, como para guardar datos de los "clientes"._
 
 Adjunto el gif sobre la entrega final. tuve que dividirlo en 2 pq era muy largo je, perdon!
 Parte 1:
